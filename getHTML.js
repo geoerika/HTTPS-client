@@ -12,7 +12,7 @@ function getHTML (options, callback) {
     var dataToPrint = "";
     response.on('data', function(data) {
       dataToPrint += data;
-      callback(printHTML(dataToPrint));
+      callback(dataToPrint);
     });
 
     // the callback is invoked when all of the writable data has been received
