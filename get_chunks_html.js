@@ -23,8 +23,7 @@ function getAndPrintHTMLChunks () {
       console.log(data.toString() + '\n');
     });
 
-    // the callback is invoked when all of the data has been eceived
-    // (the `end` of the stream)
+    // the callback is invoked when all of the writable data has been received
     response.on('finish', function() {
       console.log('Response writable chuncks finished.');
     });
